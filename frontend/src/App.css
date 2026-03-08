@@ -1,0 +1,264 @@
+/* PSE Premium Theme - Matte Black, Royal Gold, Soft Ivory */
+
+/* Import Premium Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Premium Color Variables */
+:root {
+  --pse-black: #0a0a0a;
+  --pse-charcoal: #0f0f0f;
+  --pse-dark: #1a1a1a;
+  --pse-gold: #d4af37;
+  --pse-gold-muted: rgba(212, 175, 55, 0.08);
+  --pse-gold-subtle: rgba(212, 175, 55, 0.04);
+  --pse-gold-glow: rgba(212, 175, 55, 0.12);
+  --pse-ivory: #faf8f5;
+  --pse-warm-black: #0d0b08;
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--pse-black);
+  color: var(--pse-ivory);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pse-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pse-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c4a030;
+}
+
+/* Selection */
+::selection {
+  background: var(--pse-gold);
+  color: var(--pse-black);
+}
+
+/* Premium Background Styles */
+.premium-bg-base {
+  background: 
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 60% at 0% 100%, rgba(212, 175, 55, 0.04) 0%, transparent 40%),
+    radial-gradient(ellipse 100% 60% at 100% 100%, rgba(212, 175, 55, 0.04) 0%, transparent 40%),
+    linear-gradient(180deg, #0d0b08 0%, #0a0a0a 50%, #0d0b08 100%);
+}
+
+.premium-bg-section {
+  background: 
+    radial-gradient(ellipse 80% 50% at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 50% at 80% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(15, 15, 15, 0.8) 0%, rgba(10, 10, 10, 1) 100%);
+}
+
+.premium-bg-alt {
+  background: 
+    radial-gradient(ellipse 100% 80% at 80% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 10% 80%, rgba(212, 175, 55, 0.04) 0%, transparent 40%),
+    linear-gradient(180deg, #0f0f0f 0%, #0a0a0a 100%);
+}
+
+/* Smooth Animations */
+.animate-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes subtleGlow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Subtle hover effects */
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Premium Card Styles */
+.premium-card {
+  background: 
+    linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(15, 15, 15, 0.9) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(212, 175, 55, 0.05);
+}
+
+.premium-card:hover {
+  border-color: rgba(212, 175, 55, 0.25);
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(212, 175, 55, 0.05),
+    inset 0 1px 0 rgba(212, 175, 55, 0.1);
+}
+
+/* Vignette overlay */
+.vignette-overlay {
+  position: relative;
+}
+
+.vignette-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+}
+
+/* Gold accent line */
+.gold-accent-top {
+  position: relative;
+}
+
+.gold-accent-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.4) 50%, transparent 100%);
+}
+
+.gold-accent-bottom {
+  position: relative;
+}
+
+.gold-accent-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.3) 50%, transparent 100%);
+}
+
+/* Button hover states */
+button, a {
+  transition: all 0.3s ease;
+}
+
+/* Focus states */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+}
+
+/* Image loading */
+img {
+  transition: opacity 0.3s ease;
+}
+
+/* Card hover animations */
+.card-hover {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.1);
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Prevent horizontal scroll */
+.App {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background: 
+    radial-gradient(ellipse 150% 100% at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 120% 80% at 0% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+    radial-gradient(ellipse 120% 80% at 100% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+    radial-gradient(ellipse 100% 100% at 50% 100%, rgba(212, 175, 55, 0.10) 0%, transparent 50%),
+    linear-gradient(180deg, #0d0b08 0%, #0a0a0a 30%, #0a0a0a 70%, #0d0b08 100%);
+}
