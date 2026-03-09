@@ -1,10 +1,9 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
-import { Controller, FormProvider, useFormContext } from "react-hook-form";
+import { Controller, FormProvider, useFormContext } from "react-hook-form"
 
 import { cn } from "../../lib/utils"
-import { Label } from "import { cn } from "../../lib/utils"components/ui/label"
-
+import { Label } from "./label"
 const Form = FormProvider
 
 const FormFieldContext = React.createContext({})
