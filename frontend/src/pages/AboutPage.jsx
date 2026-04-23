@@ -38,7 +38,7 @@ const AboutPage = () => {
   const milestones = [
     { year: "2005", title: "Founded", description: "Started with a vision to simplify education and documentation" },
     { year: "2010", title: "Expansion", description: "Expanded services to multiple universities" },
-    { year: "2015", title: "1000 Students", description: "Crossed milestone of guiding 1000 students" },
+    { year: "2015", title: "1000 Students", description: "Crossed milestone of guiding 1000 Students" },
     { year: "2023", title: "Digital Services", description: "Launched online consultation and support" }
   ];
 
